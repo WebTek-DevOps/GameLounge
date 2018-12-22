@@ -4,9 +4,78 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameLounge"
+        xmlns:panels="panel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="517.5" Width="596">
+
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="48*"/>
+      <RowDefinition Height="439*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="25*"/>
+      <ColumnDefinition Width="122*"/>
+    </Grid.ColumnDefinitions>
+    <Grid Grid.Column="1" Grid.Row="0">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+        <ColumnDefinition/>
+      </Grid.ColumnDefinitions>
+      <Button Content="Add" Grid.Column="0" Style="{StaticResource BigButton}" Height="Auto" Width="Auto">
+        <Button.Tag>
+          <ImageSource>Resources/add.png</ImageSource>
+        </Button.Tag>
+
+      </Button>
+      <Button Content="Remove" Grid.Column="1" Style="{StaticResource BigButton}" Height="Auto" Width="Auto">
+        <Button.Tag>
+          <ImageSource>Resources/minus.png</ImageSource>
+        </Button.Tag>
         
+      </Button>
+
+      <Button Content="Update" Grid.Column="2" Style="{StaticResource BigButton}" Height="Auto" Width="Auto">
+        <Button.Tag>
+          <ImageSource>Resources/refresh.png</ImageSource>
+        </Button.Tag>
+        
+      </Button>
+      <Button Content="Settings" Grid.Column="3" Style="{StaticResource BigButton}" Height="Auto" Width="Auto">
+        <Button.Tag>
+          <ImageSource>Resources/settings.png</ImageSource>
+        </Button.Tag>
+      </Button>
     </Grid>
+    <Grid Grid.Row="1" >
+      <Grid.RowDefinitions>
+        <RowDefinition Height="40*"/>
+        <RowDefinition Height="40*"/>
+        <RowDefinition Height="370*"/>
+      </Grid.RowDefinitions>
+
+      <Button FontFamily="Segoe UI Light" Content="Clients" Grid.Row="0" Click="Btn_client" Foreground="Yellow" Style="{StaticResource Control}" Template="{StaticResource ControlT}">
+        <Button.Tag>
+          <ImageSource>Resources/clients.png</ImageSource>
+        </Button.Tag>
+      </Button>
+
+
+      <Button  FontFamily="Segoe UI Light" Content="Account" Grid.Row="1" Click="Btn_account" Style="{StaticResource Control}" Template="{StaticResource ControlT}">
+
+        <Button.Tag>
+          <ImageSource>Resources/TEST.png</ImageSource>
+        </Button.Tag>
+      </Button>
+    </Grid>
+
+    <Grid  Grid.Row="1" Grid.Column="1">
+      <local:listview_client Visibility="Hidden" x:Name="listview_client"/>
+      <local:listview_account Visibility="Hidden" x:Name="listview_account" />
+    </Grid>
+  </Grid>
+
+
 </Window>

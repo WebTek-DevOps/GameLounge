@@ -15,14 +15,49 @@ using System.Windows.Shapes;
 
 namespace GameLounge
 {
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private UserControl VISIBLE_UC;
+        private List<UserControl> MY_UC;
         public MainWindow()
         {
             InitializeComponent();
+
+            MY_UC = new List<UserControl>
+            {
+                listview_account,
+                listview_client
+
+            };
         }
+
+        private void Btn_client(object sender, RoutedEventArgs e)
+        {
+            VISIBLE_UC = listview_client;
+            Update_ListView();
+        }
+        private void Btn_account(object sender, RoutedEventArgs e)
+        {
+            VISIBLE_UC = listview_account;
+            Update_ListView();
+        }
+        private void Update_ListView()
+        {
+            foreach(UserControl u in MY_UC)
+            {
+                if (!u.Equals(VISIBLE_UC))
+                {
+                    u.Visibility = Visibility.Hidden;
+                }
+
+            }
+            VISIBLE_UC.Visibility = Visibility.Visible;
+        }
+
+        
     }
 }
