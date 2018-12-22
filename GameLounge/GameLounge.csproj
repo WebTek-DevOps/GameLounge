@@ -113,9 +113,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\nbc-suit.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
@@ -128,10 +125,7 @@
     <Resource Include="Resources\settings.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\user.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\TEST.png" />
+    <Resource Include="Resources\account.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\clients.png" />

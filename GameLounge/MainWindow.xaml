@@ -56,17 +56,18 @@
         <RowDefinition Height="370*"/>
       </Grid.RowDefinitions>
 
-      <Button FontFamily="Segoe UI Light" Content="Clients" Grid.Row="0" Click="Btn_client" Foreground="Yellow" Style="{StaticResource Control}" Template="{StaticResource ControlT}">
+      <Button FontFamily="Segoe UI Light" FontSize="13" Content="Clients" Grid.Row="0" Click="Btn_client" Template="{StaticResource ControlT}">
         <Button.Tag>
           <ImageSource>Resources/clients.png</ImageSource>
         </Button.Tag>
+        
       </Button>
 
 
-      <Button  FontFamily="Segoe UI Light" Content="Account" Grid.Row="1" Click="Btn_account" Style="{StaticResource Control}" Template="{StaticResource ControlT}">
+      <Button  FontFamily="Segoe UI Light" FontSize="13" Content="Account" Grid.Row="1" Click="Btn_account" Template="{StaticResource ControlT}">
 
         <Button.Tag>
-          <ImageSource>Resources/TEST.png</ImageSource>
+          <ImageSource>Resources/account.png</ImageSource>
         </Button.Tag>
       </Button>
     </Grid>
